@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FFF9F5">
+  <meta name="description" content="A little universe of memories, small adventures, and love letters for Baby Julie.">
+  <title>Our Little Universe 💗 — For Baby Julie</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💗%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#memories">Skip to our memories</a>
+  <div class="floating-garden" aria-hidden="true"><span>♡</span><span>✧</span><span>✿</span><span>♡</span><span>✦</span><span>❀</span><span>♡</span><span>✧</span></div>
+  <header class="site-header">
+    <a href="#home" class="brand" aria-label="Our Little Universe home"><span class="brand-icon">♡</span><span>our little universe<span class="brand-sub">a scrapbook of us</span></span></a>
+    <button id="menu-toggle" class="icon-button menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation">☰</button>
+    <nav id="main-nav" aria-label="Main navigation">
+      <a href="#home" class="active">Home <span>⌂</span></a><a href="#memories">Memories <span>▧</span></a><a href="#story">Our Story <span>♡</span></a><a href="#letter">Love Letter <span>✉</span></a><a href="#memories" id="nav-favorites">Favorites <span>♥</span></a>
+    </nav>
+    <div class="header-tools"><button id="music-button" class="music-button" aria-label="Play optional music">♫ <span>our soundtrack</span><i></i></button><button id="dark-toggle" class="icon-button" aria-label="Switch to darker romantic theme" aria-pressed="false">☾</button></div>
+  </header>
+  <main>
+    <section id="home" class="hero section-shell">
+      <div class="hero-copy">
+        <div class="eyebrow pill"><span>✦</span> MADE WITH LOVE, JUST FOR YOU</div>
+        <h1>Our Little<br><em>Universe</em><span class="title-heart" aria-label="love">♡</span></h1>
+        <p class="hero-subtitle">a little place for all my favorite memories with you, julie.</p>
+        <p class="hero-message" id="hero-message"></p>
+        <div class="hero-actions"><a class="button primary" href="#memories">Open Our Memories <span>💌</span></a><button class="button soft" id="hero-letter">A Little Message for You <span>♡</span></button></div>
+        <p class="handwritten hero-footnote">you + me + a hundred little moments <span>↗</span></p>
+      </div>
+      <div class="hero-art" aria-label="Decorative scrapbook photo frames">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <span class="art-star star-one">✦</span><span class="art-star star-two">✧</span><span class="art-star star-three">✦</span>
+        <div class="little-note">to my favorite<br>person, always. <span>♡</span></div>
+        <div class="back-polaroid"><div class="sunset"><span>☼</span><i></i><b></b></div><p class="handwritten">our happy place</p></div>
+        <button id="hero-photo" class="hero-polaroid" aria-label="Open our favorite picture, memory 1"><span class="tape"></span><span class="hero-photo-area" id="hero-photo-area"><span class="heart-drawing">♥<i>✦</i></span><span class="photo-whisper">a little space for our favorite picture</span></span><span class="polaroid-label handwritten">my favorite place is with you. ♡</span></button>
+        <div class="flower-sticker" aria-hidden="true">✿</div><span class="love-stamp">SENT WITH<br><b>♥</b><br>ALL MY LOVE</span>
+        <div class="hero-art-caption handwritten">collecting moments, not things</div>
+      </div>
+    </section>
+    <div class="stats-wrap section-shell"><div class="stats-strip">
+      <div><span class="stat-icon">♡</span><p><strong id="space-count">100</strong><span>little spaces for our memories</span></p></div>
+      <div><span class="stat-icon lavender">▧</span><p><strong id="photo-count">0</strong><span>photos tucked away</span></p></div>
+      <div><span class="stat-icon peach">♥</span><p><strong id="favorite-count">0</strong><span>extra-special favorites</span></p></div>
+      <button id="relationship-button" class="relationship-stat"><span class="stat-icon blue">∞</span><p><strong id="days-count">Our beginning</strong><span id="days-label">add the day our story started ↗</span></p></button>
+    </div></div>
+    <section id="memories" class="memories-section section-shell">
+      <div class="section-heading"><div><p class="eyebrow">THE MOMENTS THAT MAKE US, US</p><h2>Our <em>100 Memories</em> <span class="heading-doodle">♡</span></h2><p>Big adventures. Tiny moments. A whole lot of us.</p></div><button id="add-memory" class="button primary">＋ Add a Memory</button></div>
+      <div class="gallery-tools"><div class="filter-tabs" role="group" aria-label="Memory filters"><button id="view-all" class="selected" aria-pressed="true">View All <span id="all-count">100</span></button><button id="view-favorites" aria-pressed="false">Favorites <span>♡</span></button></div><div class="search-sort"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a little memory…" aria-label="Search memory titles and captions"></label><label class="sr-only" for="sort">Sort memories</label><select id="sort"><option value="default">Our original order</option><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></div></div>
+      <div class="gallery-meta"><span id="gallery-summary" role="status">100 memories waiting to happen</span><button id="random-memory" class="text-button">Random Memory 🎲</button></div>
+      <div id="gallery" class="gallery"></div>
+      <div id="empty-state" class="empty-state" hidden><span>♡</span><h3>No little memories here yet</h3><p id="empty-copy">Try a different search, or save a favorite with the heart button.</p><button id="clear-filters" class="button soft">Show all memories</button></div>
+      <div class="gallery-bottom"><button id="previous-memory" class="text-button">← Previous Memory</button><button id="show-more" class="button soft">Unfold more memories ↓</button><button id="next-memory" class="text-button">Next Memory ➜</button></div>
+      <p class="storage-note">♡ Your edits and chosen photos stay in this browser. Keep your original photos safe; browser storage is not a backup. <button id="how-to" class="text-button">How to add our photos</button></p>
+    </section>
+    <section class="quote-strip"><span>✧</span><p class="handwritten">“Even the ordinary feels a little magical with you.”</p><span>♡</span></section>
+    <section id="story" class="story-section section-shell"><div class="section-heading"><div><p class="eyebrow">ONE LITTLE MOMENT AT A TIME</p><h2>Our Little <em>Story</em> <span class="heading-doodle">💕</span></h2><p>Every love story has a beginning. This one is my favorite.</p></div><span class="handwritten story-note">still being written… ✎</span></div><div id="timeline" class="timeline"></div></section>
+    <section id="letter" class="letter-section section-shell"><div class="letter-decoration" aria-hidden="true"><span>♡</span><p class="handwritten">some words,<br>just for you.</p><span>↘</span></div><div class="letter-paper"><div class="letter-top"><span class="eyebrow">SEALED WITH A LITTLE LOVE</span><span class="letter-stamp">✉<small>TO: JULIE</small></span></div><h2>For My <em>Baby Julie</em> <span>♡</span></h2><p id="letter-preview" class="letter-text"></p><p class="handwritten letter-signature">Always in all ways, yours. ♡</p><div class="letter-actions"><button id="read-letter" class="button primary">Read My Letter 💌</button><button id="edit-letter" class="text-button">Edit Letter ✎</button></div></div></section>
+    <section class="extra-section section-shell"><div><span class="eyebrow">A LITTLE MORE MAGIC</span><h2>Make it <em>ours.</em></h2><p>Different colors. The same favorite person.</p></div><div class="extra-buttons"><button id="change-theme" class="button soft">Change Theme 🎨</button><button id="change-background" class="button soft">Change Background ✨</button><button id="edit-love-letter" class="button soft">Edit Love Letter 💌</button><button id="reset-theme" class="text-button">Reset Theme</button><button id="secret-message" class="button soft">A little secret ♡</button><button id="surprise" class="button primary">Surprise Me ✦</button></div></section>
+  </main>
+  <footer class="section-shell"><a href="#home" class="footer-brand">our little universe ♡</a><p>Made with all my love, for my baby Julie.<br><span>A hundred spaces. A million reasons to love you.</span></p><a class="text-button" href="#home">Back to Top ↑</a></footer>
+  <dialog id="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-shell"><button class="close-button" data-close="lightbox" aria-label="Close memory">×</button><div id="lightbox-photo" class="lightbox-photo"></div><div class="lightbox-details"><p id="lightbox-number" class="eyebrow"></p><h2 id="lightbox-title"></h2><time id="lightbox-date"></time><p id="lightbox-caption"></p><div class="lightbox-actions"><button id="lightbox-favorite" class="button soft" aria-pressed="false">♡ Favorite</button><button id="edit-memory" class="button soft">Edit Memory ✏️</button><button id="delete-memory" class="text-button danger">Delete memory</button></div><div class="lightbox-navigation"><button id="lightbox-prev" class="button soft" aria-label="Previous memory">← Previous</button><span id="lightbox-position"></span><button id="lightbox-next" class="button soft" aria-label="Next memory">Next →</button></div><p class="key-hint">← → to explore · Esc to close</p></div></div></dialog>
+  <dialog id="editor-dialog" aria-labelledby="editor-title"><div class="modal-inner"><button class="close-button" data-close="editor-dialog" aria-label="Close editor">×</button><p class="eyebrow">A NEW LITTLE CHAPTER</p><h2 id="editor-title">Add a Memory</h2><form id="memory-form"><label>Memory title<input id="memory-title" maxlength="90" required placeholder="Give this moment a name"></label><label>Caption<textarea id="memory-caption" rows="3" maxlength="1000" placeholder="What made this moment special?"></textarea></label><label>Date <span class="optional">(optional)</span><input id="memory-date" type="date" min="1900-01-01" max="9999-12-31"></label><label class="upload-zone">＋ Choose or replace a photo<input id="memory-file" type="file" accept="image/jpeg,image/png,image/webp,image/gif"><span>JPG, PNG, WebP or GIF · up to 15 MB</span></label><div id="upload-preview" class="upload-preview" hidden></div><label class="check-label"><input id="remove-photo" type="checkbox"> Remove the current photo</label><p class="form-note">Photos are saved with IndexedDB on this browser and device. They are not uploaded or synced. Clearing site data removes saved changes.</p><p id="memory-error" class="form-error" role="alert"></p><div class="form-actions"><button type="button" class="button soft" data-close="editor-dialog">Cancel</button><button id="save-memory" class="button primary" type="submit">Save Memory ♡</button></div></form></div></dialog>
+  <dialog id="utility-dialog" aria-labelledby="utility-title"><div class="modal-inner"><button class="close-button" data-close="utility-dialog" aria-label="Close dialog">×</button><div id="utility-content"></div></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <audio id="audio" loop preload="none"></audio>
+  <noscript><p class="noscript">Please enable JavaScript to explore and edit all 100 memories.</p></noscript>
+</body>
+</html>
